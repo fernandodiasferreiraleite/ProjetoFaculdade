@@ -12,6 +12,7 @@ public class Despesa {
     private Double total_fatura;
     private Double valor_pagar;
     private Date data_vencer ;
+    private String teste;
 
 
 public Despesa(Long ID,String nome, double total_fatura, double valor_pagar,Date data_vencer ){
