@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
 
 /**
  * Created by Lab. Desenvolvimento on 03/04/2017.
@@ -40,7 +40,7 @@ public class Util {
         return localString;
     }
 
-    public static List<Despesa> convertJSONtoDespesa(String jsonFile){
+    public static List<Despesa> convertJSONtoClube(String jsonFile){
         List<Despesa> despesas = new ArrayList<>();
         try {
             JSONArray mainObject = new JSONArray(jsonFile);
@@ -50,14 +50,13 @@ public class Util {
                 JSONObject localObj = mainObject.getJSONObject(i);
                 long id = localObj.getLong("id_despesa");
                 String nome = localObj.getString("nome_despesa");
-                Double total_fatura = localObj.getDouble("total_fatura");
-                Double valor_pagar = localObj.getDouble("valor_pagar");
-                Date data_vencer = localObj.getDate("data_vencer");
+                double total_fatura = localObj.getDouble("total_fatura");
+                double valor_pagar = localObj.getDouble("valor_pagar");
+                String Data_vencer = localObj.getString("data_vencer");
                 novoDespesa.setID(id);
                 novoDespesa.setNome(nome);
-                novoDespesa.setData_vencer(data_vencer);
-                novoDespesa.setValor_pagar(valor_pagar);
                 novoDespesa.setTotal_fatura(total_fatura);
+                novoDespesa.setValor_pagar(valor_pagar);
                 despesas.add(novoDespesa);
             }
 

@@ -8,20 +8,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="com.example.administrador.projetofaculdade.MainActivity">
 
-
-    <Button
-        android:onClick="selectMainOpetion"
-        android:id="@+id/btnInserir"
-        android:layout_width="match_parent"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/loginbutton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inserir Despesa" />
-    <Button
-        android:onClick="selectMainOpetion"
-        android:id="@+id/btnListar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar Despesa" />
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </LinearLayout>
