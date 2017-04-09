@@ -3,7 +3,9 @@ package com.example.administrador.projetofaculdade;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
+
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -64,6 +66,32 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
+
+
+//classe Despesa...
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void selectMainOpetion(View view){
+        Intent intent = null;
+        switch (view.getId()){
+            case R.id.btnInserir:
+                intent = new Intent(this,InsertDespesa.class);
+                break;
+            case R.id.btnListar:
+                intent = new Intent(this,ListDespesaActivity.class);
+                break;
+        }
+        if(intent != null){
+            startActivity(intent);
+        }
+    }
+
+
 
 
 
