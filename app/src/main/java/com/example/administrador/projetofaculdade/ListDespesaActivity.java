@@ -1,5 +1,6 @@
 package com.example.administrador.projetofaculdade;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -18,13 +21,13 @@ import java.util.List;
  * Created by Lab. Desenvolvimento on 03/04/2017.
  */
 
-public class ListDespesaActivity extends AppCompatActivity{
+public class ListDespesaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_despesa);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +51,7 @@ public class ListDespesaActivity extends AppCompatActivity{
         protected String doInBackground(Void... params) {
             HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL("http://webtests.pe.hu/selectAll.php");
+                URL url = new URL("http://www.gerenciamentofinanceiro.esy.es");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setReadTimeout(10000);
                 urlConnection.setConnectTimeout(15000);

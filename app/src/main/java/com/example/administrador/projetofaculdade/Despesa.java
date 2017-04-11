@@ -1,8 +1,9 @@
 package com.example.administrador.projetofaculdade;
 
-/**
- * Created by Lab. Desenvolvimento on 03/04/2017.
- */
+import java.util.Date;
+
+
+
 
 public class Despesa {
     private Long ID;
@@ -65,4 +66,3 @@ public class Despesa {
         this.data_vencer = data_vencer;
     }
 }
-

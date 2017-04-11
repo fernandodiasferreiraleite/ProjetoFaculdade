@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         loginWithFE();
 
 
+
     }
 
     private  void initializeControlControls(){
@@ -45,7 +47,16 @@ public class MainActivity extends AppCompatActivity {
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                txtStatus.setText("Login sucesso\n"+loginResult.getAccessToken());
+
+               Toast.makeText(MainActivity.this, "Login sucesso\n"+loginResult.getAccessToken(), Toast.LENGTH_SHORT).show();
+                //return setContentView(R.layout.activity_list_despesa);
+
+                //
+                Intent intent = new Intent(MainActivity.this,ListDespesaActivity.class);
+                startActivity(intent);
+
+
+
             }
 
             @Override
@@ -65,16 +76,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+
     }
 
 
 
 //classe Despesa...
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 
     public void selectMainOpetion(View view){
         Intent intent = null;
