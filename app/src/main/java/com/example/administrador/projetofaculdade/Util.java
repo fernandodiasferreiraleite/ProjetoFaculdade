@@ -10,8 +10,9 @@ import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
+import static android.R.attr.id;
 
 
 /**
@@ -49,16 +50,21 @@ public class Util {
             for(int i = 0; i < mainObject.length(); i++){
                 Despesa novoDespesa = new Despesa();
                 JSONObject localObj = mainObject.getJSONObject(i);
-                long id = localObj.getLong("id_despesa");
-                String nome = localObj.getString("nome_despesa");
-                double total_fatura = localObj.getDouble("total_fatura");
-                double valor_pagar = localObj.getDouble("valor_pagar");
-                String data_vencer = localObj.getString("data_vencer");
-                novoDespesa.setID(id);
-                novoDespesa.setNome(nome);
-                novoDespesa.setTotal_fatura(total_fatura);
-                novoDespesa.setValor_pagar(valor_pagar);
-                novoDespesa.setData_vencer(data_vencer);
+                long ID_Despesa = localObj.getLong("ID_Despesa");
+                String nome_despesa = localObj.getString("Nome_despesa");
+                String valor = localObj.getString("valor");
+                String data_pagamento = localObj.getString("data_pagamento");
+                String desconto = localObj.getString("desconto");
+                int ID_Tipo_despesa = localObj.getInt("ID_Tipo_despesa");
+                int ID_Usuario = localObj.getInt("ID_Usuario");
+
+                novoDespesa.setID_Despesa(ID_Despesa);
+                novoDespesa.setNome_despesa(nome_despesa);
+                novoDespesa.setValor(valor);
+                novoDespesa.setData_pagamento(data_pagamento);
+                novoDespesa.setDesconto(desconto);
+                novoDespesa.setID_Tipo_despesa(ID_Tipo_despesa);
+                novoDespesa.setID_Usuario(ID_Usuario);
                 despesas.add(novoDespesa);
             }
 

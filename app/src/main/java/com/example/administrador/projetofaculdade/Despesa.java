@@ -6,19 +6,23 @@ import java.util.Date;
 
 
 public class Despesa {
-    private Long ID;
-    private String nome;
-    private Double total_fatura;
-    private Double valor_pagar;
-    private String data_vencer;
+    private Long ID_Despesa;
+    private String nome_despesa;
+    private String valor;
+    private String data_pagamento;
+    private String desconto;
+    private int ID_Tipo_despesa;
+    private int ID_Usuario;
 
 
-    public Despesa(Long ID, String nome, double total_fatura, double valor_pagar, String data_vencer) {
-        this.ID = ID;
-        this.nome = nome;
-        this.total_fatura = total_fatura;
-        this.valor_pagar = valor_pagar;
-        this.data_vencer = data_vencer;
+    public Despesa(Long ID_Despesa, String nome_despesa, String valor, String data_pagamento, String desconto, int ID_Tipo_despesa, int ID_Usuario) {
+        this.ID_Despesa = ID_Despesa;
+        this.nome_despesa = nome_despesa;
+        this.valor = valor;
+        this.data_pagamento = data_pagamento;
+        this.desconto = desconto;
+        this.ID_Tipo_despesa = ID_Tipo_despesa;
+        this.ID_Usuario = ID_Usuario;
 
     }
 
@@ -26,43 +30,66 @@ public class Despesa {
 
     }
 
-    public Long getID() {
-        return ID;
+    public Long getID_Despesa() {
+        return ID_Despesa;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setID_Despesa(Long ID_Despesa) {
+        this.ID_Despesa = ID_Despesa;
     }
 
-    public String getNome() {
-        return nome;
+
+
+
+
+
+
+    public String getNome_despesa() {
+        return nome_despesa;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome_despesa(String nome_despesa) {
+        this.nome_despesa = nome_despesa;
     }
 
-    public Double getTotal_fatura() {
-        return total_fatura;
+    public String getValor() {
+        return valor;
     }
 
-    public void setTotal_fatura(Double total_fatura) {
-        this.total_fatura = total_fatura;
+    public void setValor(String valor) {
+        this.valor = valor;
     }
 
-    public Double getValor_pagar() {
-        return valor_pagar;
+    public String getData_pagamento() {
+        return data_pagamento;
     }
 
-    public void setValor_pagar(Double valor_pagar) {
-        this.valor_pagar = valor_pagar;
+    public void setData_pagamento(String data_pagamento) {
+        this.data_pagamento = data_pagamento;
     }
 
-    public String getData_vencer() {
-        return data_vencer;
+    public String getDesconto() {
+        return desconto;
     }
 
-    public void setData_vencer(String data_vencer) {
-        this.data_vencer = data_vencer;
+    public void setDesconto(String desconto) {
+        this.desconto = desconto;
+    }
+
+    public int getID_Tipo_despesa() {
+        return ID_Tipo_despesa;
+    }
+
+    public void setID_Tipo_despesa(int ID_Tipo_despesa) {
+        this.ID_Tipo_despesa = ID_Tipo_despesa;
+    }
+
+    public int getID_Usuario() {
+        return ID_Usuario;
+    }
+
+    public void setID_Usuario(int ID_Usuario) {
+        this.ID_Usuario = ID_Usuario;
     }
 }
+

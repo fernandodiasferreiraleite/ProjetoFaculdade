@@ -1,6 +1,10 @@
 package com.example.administrador.projetofaculdade;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.widget.Toast;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -27,6 +32,7 @@ public class ListDespesaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_despesa);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -46,21 +52,47 @@ public class ListDespesaActivity extends AppCompatActivity {
     }
 
     private class DownloadFromMyAPI extends AsyncTask<Void, Void, String> {
-//Daqui para baixo
+
+        boolean isConnected = false;
+        ProgressDialog progress;
+        @Override
+        protected void onPreExecute(){
+
+            ConnectivityManager cm =
+                    (ConnectivityManager)ListDespesaActivity.this.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+            isConnected = activeNetwork != null &&
+                    activeNetwork.isConnectedOrConnecting();
+
+            if(isConnected) {
+                progress = new ProgressDialog(ListDespesaActivity.this);
+                progress.setMessage("Aguarde o Download dos Dados");
+                progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progress.setProgress(0);
+                progress.show();
+            }
+            else{
+                Toast.makeText(ListDespesaActivity.this, "Verifique a conexão com a internet...", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
+
+
+
+
         @Override
         protected String doInBackground(Void... params) {
             HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL("http://www.gerenciamentofinanceiro.esy.es");
+                URL url = new URL("http://gerenciamentofinanceiro.esy.es/selectAll.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setReadTimeout(10000);
                 urlConnection.setConnectTimeout(15000);
                 urlConnection.setRequestMethod("GET");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);
-                /*urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestMethod("POST");
-                urlConnection.connect();*/
 
                 int test = urlConnection.getResponseCode();
 
@@ -80,14 +112,18 @@ public class ListDespesaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            List<Despesa> despesas = Util.convertJSONtoDespesa(s);
-            if(despesas != null){
-                ArrayAdapter<Despesa> despesaAdapter = new DespesaAdapter(ListDespesaActivity.this,R.layout.despesa_item,despesas);
-                ListView listaDespesa = (ListView) findViewById(R.id.listDespesas);
-                listaDespesa.setAdapter(despesaAdapter);
+            if(isConnected)
+            {
+                List<Despesa> despesas = Util.convertJSONtoDespesa(s);
+                if(despesas != null){
+                    ArrayAdapter<Despesa> despesaAdapter = new DespesaAdapter(ListDespesaActivity.this,R.layout.despesa_item,despesas);
+                    ListView listaDespesa = (ListView) findViewById(R.id.listDespesas);
+                    listaDespesa.setAdapter(despesaAdapter);
+                }
+                progress.dismiss();
             }
+
         }
     }
 
 }
-
