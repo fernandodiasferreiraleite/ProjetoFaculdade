@@ -21,6 +21,7 @@ import static android.R.attr.id;
 
 public class Util {
     public static String webToString(InputStream inputStream) {
+
         InputStream localStream = inputStream;
         String localString = "";
         Writer writer = new StringWriter();

@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancel() {
                 txtStatus.setText("Login cancelado");
+
             }
 
             @Override

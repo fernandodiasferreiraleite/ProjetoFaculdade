@@ -21,7 +21,9 @@ public class Despesa {
         this.valor = valor;
         this.data_pagamento = data_pagamento;
         this.desconto = desconto;
+
         this.ID_Tipo_despesa = ID_Tipo_despesa;
+
         this.ID_Usuario = ID_Usuario;
 
     }

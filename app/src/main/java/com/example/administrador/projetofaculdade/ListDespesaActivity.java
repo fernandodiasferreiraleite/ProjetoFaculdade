@@ -85,6 +85,7 @@ public class ListDespesaActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(Void... params) {
             HttpURLConnection urlConnection = null;
+
             try {
                 URL url = new URL("http://gerenciamentofinanceiro.esy.es/selectAll.php");
                 urlConnection = (HttpURLConnection) url.openConnection();

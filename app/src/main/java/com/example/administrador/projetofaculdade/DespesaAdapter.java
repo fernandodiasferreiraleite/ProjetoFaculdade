@@ -13,7 +13,9 @@ import java.util.List;
 
 public class DespesaAdapter extends ArrayAdapter<Despesa>{
     private List<Despesa> despesas;
+
     private int layout;
+
 
 
     public DespesaAdapter(Context context, int resource, List<Despesa>despesas){
