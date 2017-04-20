@@ -56,6 +56,7 @@ public class ListDespesaActivity extends AppCompatActivity {
         boolean isConnected = false;
         ProgressDialog progress;
         @Override
+
         protected void onPreExecute(){
 
             ConnectivityManager cm =
