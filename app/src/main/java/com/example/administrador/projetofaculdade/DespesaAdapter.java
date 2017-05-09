@@ -37,33 +37,33 @@ public class DespesaAdapter extends ArrayAdapter<Despesa>{
         Despesa despesa = despesas.get(position);
 
         if (despesa != null) {
-            TextView textID_Despesa = (TextView) localView.findViewById(R.id.textID_Despesa);
-            TextView textNome_despesa = (TextView) localView.findViewById(R.id.textNome_despesa);
+            TextView textIdDespesa = (TextView) localView.findViewById(R.id.textID_Despesa);
+            TextView textnomeDespesa = (TextView) localView.findViewById(R.id.textNome_despesa);
             TextView textValor = (TextView) localView.findViewById(R.id.textValor);
-            TextView textData_pagamento = (TextView) localView.findViewById(R.id.textData_pagamento);
+            TextView textdataPagamento = (TextView) localView.findViewById(R.id.textData_pagamento);
             TextView textDesconto = (TextView) localView.findViewById(R.id.textDesconto);
-            TextView textID_Tipo_despesa = (TextView) localView.findViewById(R.id.textID_Tipo_despesa);
-            TextView textID_Usuario = (TextView) localView.findViewById(R.id.textID_Usuario);
-            if (textID_Despesa != null) {
-                textID_Despesa.setText(String.valueOf(despesa.getID_Despesa()));
+            TextView textidTipoDespesa = (TextView) localView.findViewById(R.id.textID_Tipo_despesa);
+            TextView textidPessoa = (TextView) localView.findViewById(R.id.textID_Usuario);
+            if (textidTipoDespesa != null) {
+                textidTipoDespesa.setText(String.valueOf(despesa.getIdDespesa()));
             }
-            if (textNome_despesa != null) {
-                textNome_despesa.setText(String.valueOf(despesa.getNome_despesa()));          }
+            if (textnomeDespesa != null) {
+                textnomeDespesa.setText(String.valueOf(despesa.getNomeDespesa()));          }
             if (textValor != null) {
                 textValor.setText(String.valueOf(despesa.getValor()));
             }
-            if (textData_pagamento != null) {
-                textData_pagamento.setText(String.valueOf(despesa.getData_pagamento()));
+            if (textdataPagamento != null) {
+                textdataPagamento.setText(String.valueOf(despesa.getDataPagamento()));
             }
             if (textDesconto != null) {
                 textDesconto.setText(String.valueOf(despesa.getDesconto()));
             }
 
-            if (textID_Tipo_despesa != null) {
-                textID_Tipo_despesa.setText(String.valueOf(despesa.getID_Tipo_despesa()));
+            if (textidTipoDespesa != null) {
+                textidTipoDespesa.setText(String.valueOf(despesa.getIdTipoDespesa()));
             }
-            if (textID_Usuario != null) {
-                textID_Usuario.setText(String.valueOf(despesa.getID_Usuario()));
+            if (textidPessoa != null) {
+                textidPessoa.setText(String.valueOf(despesa.getIdPessoa()));
             }
 
 

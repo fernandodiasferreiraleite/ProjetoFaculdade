@@ -9,10 +9,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
-import static android.R.attr.id;
 
 
 /**
@@ -44,32 +46,53 @@ public class Util {
     }
 
     public static List<Despesa> convertJSONtoDespesa(String jsonFile){
+
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
         List<Despesa> despesas = new ArrayList<>();
         try {
             JSONArray mainObject = new JSONArray(jsonFile);
 
             for(int i = 0; i < mainObject.length(); i++){
-                Despesa novoDespesa = new Despesa();
-                JSONObject localObj = mainObject.getJSONObject(i);
-                long ID_Despesa = localObj.getLong("ID_Despesa");
-                String nome_despesa = localObj.getString("Nome_despesa");
-                String valor = localObj.getString("valor");
-                String data_pagamento = localObj.getString("data_pagamento");
-                String desconto = localObj.getString("desconto");
-                int ID_Tipo_despesa = localObj.getInt("ID_Tipo_despesa");
-                int ID_Usuario = localObj.getInt("ID_Usuario");
 
-                novoDespesa.setID_Despesa(ID_Despesa);
-                novoDespesa.setNome_despesa(nome_despesa);
+                Despesa novoDespesa = new Despesa();
+
+                JSONObject localObj = mainObject.getJSONObject(i);
+
+                int IdDespesa = localObj.getInt("IdDespesa");
+
+                String nomeDespesa = localObj.getString("nomeDespesa");
+
+                float valor = Float.parseFloat(localObj.getString("valor"));
+
+                Date dataPagamento = formato.parse("descontoPagamento");
+
+                float desconto = Float.parseFloat(localObj.getString("desconto"));
+
+                int IdTipoDespesa = localObj.getInt("IdTipoDespesa");
+
+                int IdPessoa = localObj.getInt("IdPessoa");
+
+                novoDespesa.setIdDespesa(IdDespesa);
+
+                novoDespesa.setNomeDespesa(nomeDespesa);
+
                 novoDespesa.setValor(valor);
-                novoDespesa.setData_pagamento(data_pagamento);
+
+                novoDespesa.setDataPagamento(dataPagamento);
+
                 novoDespesa.setDesconto(desconto);
-                novoDespesa.setID_Tipo_despesa(ID_Tipo_despesa);
-                novoDespesa.setID_Usuario(ID_Usuario);
+
+                novoDespesa.setIdTipoDespesa(IdTipoDespesa);
+
+                novoDespesa.setIDPessoa(IdDespsesa);
+
                 despesas.add(novoDespesa);
             }
 
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
             e.printStackTrace();
         }
         return despesas;

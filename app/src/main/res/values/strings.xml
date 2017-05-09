@@ -4,4 +4,15 @@
     <string name="appbar_scrolling_view_behavior"></string>
     <string name="title_activity_main22">Main22Activity</string>
 
+
+
+    <string name="hintNomeDespesa">Nome da Despesa</string>
+    <string name="hintvalor">valor</string>
+    <string name="hintdataPagamento">data Pagamento</string>
+    <string name="hintdesconto">desconto</string>
+    <string name="hintidTipoDespesa">idTipoDespesa</string>
+    <string name="hintidPessoa">idPessoa</string>
+
 </resources>
+
+
