@@ -28,7 +28,6 @@ import com.facebook.FacebookContentProvider;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 
-import java.io.*;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;

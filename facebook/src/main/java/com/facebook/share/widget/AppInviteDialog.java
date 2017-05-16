@@ -28,8 +28,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.facebook.FacebookCallback;
-import com.facebook.internal.*;
-import com.facebook.share.internal.*;
 import com.facebook.share.model.AppInviteContent;
 
 import org.json.JSONException;

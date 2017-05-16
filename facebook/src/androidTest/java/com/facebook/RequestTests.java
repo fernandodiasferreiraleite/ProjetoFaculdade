@@ -25,7 +25,6 @@ import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.test.suitebuilder.annotation.LargeTest;
-import android.test.suitebuilder.annotation.Suppress;
 
 import com.facebook.internal.GraphUtil;
 import com.facebook.share.ShareApi;

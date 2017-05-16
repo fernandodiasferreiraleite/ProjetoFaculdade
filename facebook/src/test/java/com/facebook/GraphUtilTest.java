@@ -26,10 +26,9 @@ import com.facebook.internal.NativeProtocol;
 import org.json.JSONObject;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-
-import static org.junit.Assert.*;
 
 public class GraphUtilTest extends FacebookTestCase {
     @Test

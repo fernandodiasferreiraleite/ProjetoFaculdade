@@ -20,8 +20,6 @@
 
 package com.facebook.internal;
 
-import android.test.suitebuilder.annotation.SmallTest;
-
 import com.facebook.FacebookTestCase;
 
 import org.junit.Test;

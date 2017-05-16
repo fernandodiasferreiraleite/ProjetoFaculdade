@@ -1,13 +1,13 @@
 package com.example.administrador.projetofaculdade;
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -16,7 +16,6 @@ import android.widget.Toast;
 import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Date;
 
 public class InsertDespesa extends Activity {
         private EditText editNomeDespesa;
@@ -40,25 +39,13 @@ public class InsertDespesa extends Activity {
         }
 
         public void cadastrarDespesa(View v){
-            Despesa despesa= new Despesa();
+           Despesa despesa = new Despesa();
             despesa.setNomeDespesa(editNomeDespesa.getText().toString());
             despesa.setValor(Integer.parseInt(editvalor.getText().toString()));
-
-
-
-            despesa.setDataPagamento(editdataPagamento.getText().toString());
-
-
-
-
-
-
-
-
+            //despesa.setDataPagamento(editdataPagamento.getString().toString());
             despesa.setDesconto(Integer.parseInt(editdesconto.getText().toString()));
-            despesa.setIdPessoa (Str(editidPessoa.getText().toString()));
+            despesa.setIdPessoa(Integer.parseInt(editidPessoa.getText().toString()));
             new UploadToMyAPI().execute(despesa);
-
         }
 
         private class UploadToMyAPI extends AsyncTask<Despesa, Void, String> {

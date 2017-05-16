@@ -20,15 +20,15 @@
 
 package com.facebook.appevents;
 
-import com.facebook.internal.FetchedAppSettingsManager;
-import com.facebook.internal.Utility;
-import com.facebook.internal.FetchedAppSettings;
 import com.facebook.FacebookTestCase;
+import com.facebook.internal.FetchedAppSettings;
+import com.facebook.internal.FetchedAppSettingsManager;
 
 import org.json.JSONObject;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.powermock.reflect.Whitebox;
+
+import static org.junit.Assert.assertEquals;
 
 public class AutomaticAnalyticsTest extends FacebookTestCase {
 

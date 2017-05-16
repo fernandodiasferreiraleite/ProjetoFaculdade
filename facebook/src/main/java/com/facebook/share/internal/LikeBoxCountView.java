@@ -21,12 +21,12 @@
 package com.facebook.share.internal;
 
 import android.content.Context;
-import android.graphics.*;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
 import com.facebook.R;
 
 /**

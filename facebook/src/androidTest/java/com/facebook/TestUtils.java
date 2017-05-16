@@ -26,14 +26,14 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import com.facebook.internal.FileLruCache;
 import com.facebook.internal.Utility;
+
 import junit.framework.Assert;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.io.*;
-import java.util.*;
 
 public class TestUtils {
     private static long CACHE_CLEAR_TIMEOUT = 3000;

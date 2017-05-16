@@ -41,7 +41,6 @@ import android.widget.TextView;
 
 import com.facebook.FacebookException;
 import com.facebook.R;
-import com.facebook.internal.*;
 import com.facebook.share.internal.LikeActionController;
 import com.facebook.share.internal.LikeBoxCountView;
 import com.facebook.share.internal.LikeButton;

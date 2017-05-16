@@ -34,7 +34,6 @@ import com.facebook.LoggingBehavior;
 import com.facebook.internal.FetchedAppSettings;
 import com.facebook.internal.FetchedAppSettingsManager;
 import com.facebook.internal.Logger;
-import com.facebook.internal.Utility;
 
 import org.json.JSONArray;
 import org.json.JSONException;

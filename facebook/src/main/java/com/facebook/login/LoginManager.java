@@ -22,10 +22,10 @@ package com.facebook.login;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.content.Context;
 import android.support.v4.app.Fragment;
 
 import com.facebook.AccessToken;
@@ -37,10 +37,10 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphResponse;
 import com.facebook.Profile;
+import com.facebook.appevents.AppEventsConstants;
 import com.facebook.internal.CallbackManagerImpl;
 import com.facebook.internal.FragmentWrapper;
 import com.facebook.internal.Validate;
-import com.facebook.appevents.AppEventsConstants;
 
 import java.util.Collection;
 import java.util.Collections;

@@ -25,11 +25,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.facebook.FacebookCallback;
-import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.AppCall;
 import com.facebook.internal.CallbackManagerImpl;
 import com.facebook.internal.DialogFeature;
 import com.facebook.internal.DialogPresenter;
+import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.FragmentWrapper;
 import com.facebook.share.Sharer;
 import com.facebook.share.internal.LegacyNativeDialogParameters;
@@ -38,7 +38,6 @@ import com.facebook.share.internal.NativeDialogParameters;
 import com.facebook.share.internal.OpenGraphMessageDialogFeature;
 import com.facebook.share.internal.ShareContentValidation;
 import com.facebook.share.internal.ShareInternalUtility;
-import com.facebook.share.model.*;
 
 import java.util.ArrayList;
 import java.util.List;

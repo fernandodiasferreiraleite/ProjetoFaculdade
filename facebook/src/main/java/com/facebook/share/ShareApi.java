@@ -40,7 +40,6 @@ import com.facebook.internal.Utility;
 import com.facebook.share.internal.ShareContentValidation;
 import com.facebook.share.internal.ShareInternalUtility;
 import com.facebook.share.internal.VideoUploader;
-import com.facebook.share.model.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -49,7 +48,6 @@ import org.json.JSONObject;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.*;
 
 /**
  * Provides an interface for sharing through the graph API. Using this class requires an access

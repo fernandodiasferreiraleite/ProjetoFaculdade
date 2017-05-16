@@ -29,7 +29,6 @@ import android.os.Build;
 import com.facebook.FacebookSdk;
 import com.facebook.internal.FetchedAppSettingsManager;
 import com.facebook.internal.SmartLoginOption;
-import com.facebook.internal.Utility;
 
 import org.json.JSONException;
 import org.json.JSONObject;

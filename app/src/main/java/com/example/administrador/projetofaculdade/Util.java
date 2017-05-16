@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,6 +44,26 @@ public class Util {
         return localString;
     }
 
+    public static String convertDespesatoJSON(Despesa despesa){
+        JSONObject mainObject = new JSONObject();
+        try {
+            mainObject.put("nomeDespesa",despesa.getNomeDespesa());
+            mainObject.put("dataPagamento",despesa.getDataPagamento());
+            mainObject.put("desconto",despesa.getDesconto());
+            mainObject.put("id_despesa",despesa.getIdDespesa());
+            mainObject.put("idpessoa",despesa.getIdPessoa());
+            mainObject.put("idtipodespesa",despesa.getIdTipoDespesa());
+            mainObject.put("valor",despesa.getValor());
+
+            return mainObject.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
     public static List<Despesa> convertJSONtoDespesa(String jsonFile){
 
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
@@ -69,9 +88,9 @@ public class Util {
 
                 float desconto = Float.parseFloat(localObj.getString("desconto"));
 
-                int IdTipoDespesa = localObj.getInt("IdTipoDespesa");
+                int idTipoDespesa = localObj.getInt("IdTipoDespesa");
 
-                int IdPessoa = localObj.getInt("IdPessoa");
+                int idPessoa = localObj.getInt("IdPessoa");
 
                 novoDespesa.setIdDespesa(IdDespesa);
 
@@ -83,9 +102,9 @@ public class Util {
 
                 novoDespesa.setDesconto(desconto);
 
-                novoDespesa.setIdTipoDespesa(IdTipoDespesa);
+                novoDespesa.setIdTipoDespesa(idTipoDespesa);
 
-                novoDespesa.setIDPessoa(IdDespsesa);
+                novoDespesa.setIdPessoa(idPessoa);
 
                 despesas.add(novoDespesa);
             }
@@ -97,4 +116,16 @@ public class Util {
         }
         return despesas;
     }
+    public static String getStatusFromJSOM(String json){
+        try {
+            return new JSONObject(json).getString("status");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+
 }

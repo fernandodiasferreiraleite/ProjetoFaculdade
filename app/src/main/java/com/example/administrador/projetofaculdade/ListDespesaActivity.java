@@ -21,6 +21,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+import static com.example.administrador.projetofaculdade.R.styleable.FloatingActionButton;
+import static com.example.administrador.projetofaculdade.R.styleable.Toolbar;
+
 
 /**
  * Created by Lab. Desenvolvimento on 03/04/2017.

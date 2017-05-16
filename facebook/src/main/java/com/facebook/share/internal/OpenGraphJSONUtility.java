@@ -30,8 +30,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.*;
-
 /**
  * com.facebook.share.internal is solely for the use of other packages within the
  * Facebook SDK for Android. Use of any of the classes in this package is

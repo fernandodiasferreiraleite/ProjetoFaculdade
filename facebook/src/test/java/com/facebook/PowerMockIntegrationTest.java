@@ -22,8 +22,9 @@ package com.facebook;
 
 import org.junit.Test;
 import org.powermock.core.classloader.annotations.PrepareForTest;
-import static org.powermock.api.mockito.PowerMockito.*;
+
 import static org.junit.Assert.*;
+import static org.powermock.api.mockito.PowerMockito.*;
 
 /**
  * This test makes sure PowerMock integration works.

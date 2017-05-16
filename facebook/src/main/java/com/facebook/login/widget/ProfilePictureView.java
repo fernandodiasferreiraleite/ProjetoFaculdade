@@ -31,10 +31,10 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
 import com.facebook.FacebookException;
 import com.facebook.LoggingBehavior;
 import com.facebook.R;
-import com.facebook.internal.*;
 
 /**
  * View that displays the profile photo of a supplied profile ID, while conforming

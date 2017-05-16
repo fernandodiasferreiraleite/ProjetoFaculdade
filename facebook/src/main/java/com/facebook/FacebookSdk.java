@@ -33,10 +33,10 @@ import android.util.Log;
 
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.internal.AppEventsLoggerUtility;
+import com.facebook.internal.AttributionIdentifiers;
+import com.facebook.internal.BoltsMeasurementEventListener;
 import com.facebook.internal.FetchedAppSettingsManager;
 import com.facebook.internal.LockOnGetVariable;
-import com.facebook.internal.BoltsMeasurementEventListener;
-import com.facebook.internal.AttributionIdentifiers;
 import com.facebook.internal.NativeProtocol;
 import com.facebook.internal.ServerProtocol;
 import com.facebook.internal.Utility;
@@ -53,7 +53,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
-import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 

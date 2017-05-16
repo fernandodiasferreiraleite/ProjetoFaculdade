@@ -23,14 +23,12 @@ package com.facebook;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.test.suitebuilder.annotation.LargeTest;
-import android.test.suitebuilder.annotation.Suppress;
 
 import com.facebook.share.internal.ShareInternalUtility;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.lang.Override;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;

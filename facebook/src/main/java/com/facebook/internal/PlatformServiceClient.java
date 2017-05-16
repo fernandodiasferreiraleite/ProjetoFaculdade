@@ -24,7 +24,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.os.*;
 
 /**
  * com.facebook.internal is solely for the use of other packages within the Facebook SDK for

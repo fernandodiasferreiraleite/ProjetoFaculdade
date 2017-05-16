@@ -24,12 +24,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.location.Location;
 import android.net.Uri;
-import android.os.*;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 
-import com.facebook.internal.*;
 import com.facebook.share.internal.OpenGraphJSONUtility;
 import com.facebook.share.model.ShareOpenGraphObject;
 import com.facebook.share.model.SharePhoto;
@@ -38,13 +36,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPOutputStream;

@@ -19,16 +19,11 @@ public class TipoDespesa {
     }
 
 
-
-    public TipoDespesa(){
-
-    }
-
     public int getIdTipoDespesa() {
         return idTipoDespesa;
     }
 
-    public void setIDTipoDespesa(int idTipoDespesa) {
+    public void setIdTipoDespesa(int idTipoDespesa) {
         this.idTipoDespesa = idTipoDespesa;
     }
 
@@ -39,6 +34,12 @@ public class TipoDespesa {
     public void setNmTipoDespesa(String nmTipoDespesa) {
         this.nmTipoDespesa = nmTipoDespesa;
     }
+
+    public TipoDespesa(){
+
+    }
+
+
 
 
 }

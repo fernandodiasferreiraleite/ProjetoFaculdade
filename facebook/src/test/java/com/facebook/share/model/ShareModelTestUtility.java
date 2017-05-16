@@ -26,8 +26,6 @@ import android.os.Environment;
 
 import junit.framework.Assert;
 
-import java.util.*;
-
 public class ShareModelTestUtility {
     public static final String OPEN_GRAPH_ACTION_TYPE = "myActionType";
     public static final boolean OPEN_GRAPH_BOOLEAN_VALUE = true;

@@ -27,11 +27,11 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.facebook.FacebookCallback;
-import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.AppCall;
 import com.facebook.internal.CallbackManagerImpl;
 import com.facebook.internal.DialogFeature;
 import com.facebook.internal.DialogPresenter;
+import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.FragmentWrapper;
 
 import java.util.ArrayList;

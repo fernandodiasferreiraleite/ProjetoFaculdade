@@ -22,7 +22,6 @@ package com.facebook;
 
 import android.os.Handler;
 
-import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**

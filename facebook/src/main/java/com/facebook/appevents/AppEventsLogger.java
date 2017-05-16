@@ -28,16 +28,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.telecom.Call;
 import android.util.Log;
-import bolts.AppLinks;
 
 import com.facebook.AccessToken;
 import com.facebook.FacebookException;
-import com.facebook.FacebookRequestError;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
 import com.facebook.LoggingBehavior;
 import com.facebook.appevents.internal.ActivityLifecycleTracker;
@@ -67,6 +63,8 @@ import java.util.UUID;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
+import bolts.AppLinks;
 
 
 /**

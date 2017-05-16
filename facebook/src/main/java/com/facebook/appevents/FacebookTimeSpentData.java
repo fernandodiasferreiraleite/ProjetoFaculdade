@@ -27,8 +27,8 @@ import com.facebook.LoggingBehavior;
 import com.facebook.appevents.AppEventsConstants;
 import com.facebook.internal.Logger;
 
-import java.util.Locale;
 import java.io.Serializable;
+import java.util.Locale;
 
 class FacebookTimeSpentData implements Serializable {
     // Constants

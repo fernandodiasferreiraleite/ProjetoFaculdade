@@ -7,20 +7,13 @@ import java.util.Date;
  */
 
 public class Pessoa {
-    private int idPessoa;
-    private String nome;
-    private Date data_nascimento;
-    private char sexo;
+    public int idPessoa;
+    public String nome;
+    public Date data_nascimento;
+    public char sexo;
+
 
     public Pessoa(){}
-
-
-    public Pessoa(int idPessoa,String nome,Date data_nascimento,char sexo){
-        this.data_nascimento=data_nascimento;
-        this.idPessoa=idPessoa;
-        this.nome=nome;
-        this.sexo=sexo;
-    }
 
     public int getIdPessoa() {
         return idPessoa;
@@ -53,6 +46,14 @@ public class Pessoa {
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
+
+    public Pessoa(int idPessoa, String nome, Date data_nascimento, char sexo){
+        this.data_nascimento=data_nascimento;
+        this.idPessoa=idPessoa;
+        this.nome=nome;
+        this.sexo=sexo;
+    }
+
 
 
 

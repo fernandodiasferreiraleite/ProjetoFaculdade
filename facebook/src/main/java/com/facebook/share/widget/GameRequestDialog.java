@@ -26,10 +26,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.facebook.FacebookCallback;
-import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.AppCall;
 import com.facebook.internal.CallbackManagerImpl;
 import com.facebook.internal.DialogPresenter;
+import com.facebook.internal.FacebookDialogBase;
 import com.facebook.internal.FragmentWrapper;
 import com.facebook.share.internal.GameRequestValidation;
 import com.facebook.share.internal.ResultProcessor;

@@ -26,12 +26,12 @@ import android.test.FlakyTest;
 
 import com.facebook.applinks.FacebookAppLinkResolver;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import bolts.AppLink;
 import bolts.Continuation;
 import bolts.Task;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FacebookAppLinkResolverTests extends FacebookTestCase {
     private Task resolveTask;

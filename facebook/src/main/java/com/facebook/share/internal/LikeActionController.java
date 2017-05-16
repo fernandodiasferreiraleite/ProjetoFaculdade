@@ -21,14 +21,12 @@
 package com.facebook.share.internal;
 
 import android.app.Activity;
-import android.content.*;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.facebook.*;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.internal.AnalyticsEvents;
 import com.facebook.internal.AppCall;

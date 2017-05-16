@@ -22,14 +22,14 @@ package com.facebook.internal;
 
 import com.facebook.FacebookTestCase;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.junit.Test;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.junit.Test;
 
 import static org.junit.Assert.*;
 

@@ -28,8 +28,6 @@ import com.facebook.AccessToken;
 import com.facebook.FacebookTestCase;
 import com.facebook.TestBlocker;
 
-import java.util.*;
-
 public class LoginClientTests extends FacebookTestCase {
     private static final Set<String> PERMISSIONS = new HashSet<String>(
             Arrays.asList("go outside", "come back in"));
