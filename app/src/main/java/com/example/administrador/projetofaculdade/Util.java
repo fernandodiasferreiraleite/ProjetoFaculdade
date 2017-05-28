@@ -84,7 +84,7 @@ public class Util {
 
                 float valor = Float.parseFloat(localObj.getString("valor"));
 
-                Date dataPagamento = formato.parse("descontoPagamento");
+                Date dataPagamento = formato.parse("dataPagamento");
 
                 float desconto = Float.parseFloat(localObj.getString("desconto"));
 

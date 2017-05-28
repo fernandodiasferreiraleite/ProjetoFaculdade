@@ -41,8 +41,8 @@ public class InsertDespesa extends Activity {
         public void cadastrarDespesa(View v){
            Despesa despesa = new Despesa();
             despesa.setNomeDespesa(editNomeDespesa.getText().toString());
-            despesa.setValor(Integer.parseInt(editvalor.getText().toString()));
-            //despesa.setDataPagamento(editdataPagamento.getString().toString());
+           despesa.setValor(Integer.parseInt(editvalor.getText().toString()));
+           // despesa.setDataPagamento(editdataPagamento.getString().toString());
             despesa.setDesconto(Integer.parseInt(editdesconto.getText().toString()));
             despesa.setIdPessoa(Integer.parseInt(editidPessoa.getText().toString()));
             new UploadToMyAPI().execute(despesa);

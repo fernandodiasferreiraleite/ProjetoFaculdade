@@ -2,6 +2,7 @@
     <string name="app_name">ProjetoFaculdade</string>
     <string name="facebook_app_id"> 1884611531810775 </string>
     <string name="appbar_scrolling_view_behavior"></string>
+    <string name="title_activity_list_despesa">ListDespesaActivity</string>
     <string name="title_activity_main22">Main22Activity</string>
 
 

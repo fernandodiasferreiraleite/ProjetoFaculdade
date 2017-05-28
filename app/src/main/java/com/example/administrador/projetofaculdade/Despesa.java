@@ -1,4 +1,5 @@
 package com.example.administrador.projetofaculdade;
+
 import java.util.Date;
 
 public class Despesa {
@@ -6,11 +7,13 @@ public class Despesa {
     private String nomeDespesa;
     private float valor;
     private Date dataPagamento;
-    private float desconto;
+    private Float desconto;
     public int idTipoDespesa;
     public int idPessoa;
 
-public  Despesa(){}
+    public Despesa() {
+    }
+
     public int getIdDespesa() {
         return IdDespesa;
     }
@@ -43,7 +46,7 @@ public  Despesa(){}
         this.dataPagamento = dataPagamento;
     }
 
-    public float getDesconto() {
+    public Float getDesconto() {
         return desconto;
     }
 
@@ -68,7 +71,7 @@ public  Despesa(){}
     }
 
 
-    public Despesa(int IdDespesa, String nomeDespesa, float valor, Date dataPagamento, float desconto, int idTipoDespesa,int  idPessoa) {
+    public Despesa(int IdDespesa, String nomeDespesa, float valor, Date dataPagamento, Float desconto, int idTipoDespesa, int idPessoa) {
         this.IdDespesa = IdDespesa;
         this.nomeDespesa = nomeDespesa;
         this.valor = valor;
@@ -78,9 +81,6 @@ public  Despesa(){}
         this.idPessoa = idPessoa;
 
     }
-
-
-
 
 
 }

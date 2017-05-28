@@ -17,9 +17,9 @@ import com.facebook.login.widget.LoginButton;
 
 public class MainActivity extends AppCompatActivity {
 
-   public TextView txtStatus;
-    public  LoginButton loginbutton;
-    public  CallbackManager callbackManager;
+    public TextView txtStatus;
+    public LoginButton loginbutton;
+    public CallbackManager callbackManager;
 
 
     @Override
@@ -31,31 +31,28 @@ public class MainActivity extends AppCompatActivity {
         loginWithFE();
 
 
-
     }
 
-    private  void initializeControlControls(){
+    private void initializeControlControls() {
 
-        callbackManager=CallbackManager.Factory.create();
+        callbackManager = CallbackManager.Factory.create();
 //txtStatus=(TextView)findViewById(R.id.txtStatus);
-              loginbutton=(LoginButton)findViewById(R.id.loginbutton);
+        loginbutton = (LoginButton) findViewById(R.id.loginbutton);
 
 
     }
 
-    private  void loginWithFE(){
+    private void loginWithFE() {
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
 
-               Toast.makeText(MainActivity.this, "Login sucesso\n"+loginResult.getAccessToken(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Login sucesso\n" + loginResult.getAccessToken(), Toast.LENGTH_SHORT).show();
                 //return setContentView(R.layout.activity_list_despesa);
 
                 //
-                Intent intent = new Intent(MainActivity.this,ListDespesaActivity.class);
+                Intent intent = new Intent(MainActivity.this, ListDespesaActivity.class);
                 startActivity(intent);
-
-
 
 
             }
@@ -68,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(FacebookException error) {
-                txtStatus.setText("Login Error:"+error.getMessage());
+                txtStatus.setText("Login Error:" + error.getMessage());
 
             }
         });
@@ -82,26 +79,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
 //classe Despesa...
 
-    public void selectMainOpetion(View view){
+    public void selectMainOpetion(View view) {
         Intent intent = null;
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btnInserir:
-                intent = new Intent(this,InsertDespesa.class);
+                intent = new Intent(this, InsertDespesa.class);
                 break;
             case R.id.btnListar:
-                intent = new Intent(this,ListDespesaActivity.class);
+                intent = new Intent(this, ListDespesaActivity.class);
                 break;
         }
-        if(intent != null){
+        if (intent != null) {
             startActivity(intent);
         }
     }
-
-
-
 
 
 }

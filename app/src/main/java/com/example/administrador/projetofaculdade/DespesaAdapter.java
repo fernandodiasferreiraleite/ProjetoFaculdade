@@ -10,18 +10,16 @@ import android.widget.TextView;
 import java.util.List;
 
 
-
-public class DespesaAdapter extends ArrayAdapter<Despesa>{
+public class DespesaAdapter extends ArrayAdapter<Despesa> {
     private List<Despesa> despesas;
 
     private int layout;
 
 
-
-    public DespesaAdapter(Context context, int resource, List<Despesa>despesas){
-        super(context, resource,despesas);
-        this.despesas=despesas;
-        layout=resource;
+    public DespesaAdapter(Context context, int resource, List<Despesa> despesas) {
+        super(context, resource, despesas);
+        this.despesas = despesas;
+        layout = resource;
     }
 
 
@@ -44,11 +42,16 @@ public class DespesaAdapter extends ArrayAdapter<Despesa>{
             TextView textDesconto = (TextView) localView.findViewById(R.id.textDesconto);
             TextView textidTipoDespesa = (TextView) localView.findViewById(R.id.textID_Tipo_despesa);
             TextView textidPessoa = (TextView) localView.findViewById(R.id.textID_Usuario);
+            if (textIdDespesa != null) {
+                textIdDespesa.setText(String.valueOf((despesa.getIdDespesa())));
+            }
+
             if (textidTipoDespesa != null) {
-                textidTipoDespesa.setText(String.valueOf(despesa.getIdDespesa()));
+                textidTipoDespesa.setText(String.valueOf(despesa.getIdTipoDespesa()));
             }
             if (textnomeDespesa != null) {
-                textnomeDespesa.setText(String.valueOf(despesa.getNomeDespesa()));          }
+                textnomeDespesa.setText(String.valueOf(despesa.getNomeDespesa()));
+            }
             if (textValor != null) {
                 textValor.setText(String.valueOf(despesa.getValor()));
             }
@@ -59,9 +62,6 @@ public class DespesaAdapter extends ArrayAdapter<Despesa>{
                 textDesconto.setText(String.valueOf(despesa.getDesconto()));
             }
 
-            if (textidTipoDespesa != null) {
-                textidTipoDespesa.setText(String.valueOf(despesa.getIdTipoDespesa()));
-            }
             if (textidPessoa != null) {
                 textidPessoa.setText(String.valueOf(despesa.getIdPessoa()));
             }
@@ -69,6 +69,6 @@ public class DespesaAdapter extends ArrayAdapter<Despesa>{
 
         }
 
-    return localView;
+        return localView;
     }
 }
