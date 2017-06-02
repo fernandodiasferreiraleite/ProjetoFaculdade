@@ -88,8 +88,8 @@ loadDespesas();
             try {
                 URL url = new URL("http://www.gerenciamentofinanceiro.esy.es/select.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setReadTimeout(20000);
-                urlConnection.setConnectTimeout(25000);
+                urlConnection.setReadTimeout(10000);
+                urlConnection.setConnectTimeout(15000);
                 urlConnection.setRequestMethod("GET");
                 urlConnection.setDoInput(true);
                 urlConnection.setDoOutput(true);

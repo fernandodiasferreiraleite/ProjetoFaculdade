@@ -6,9 +6,8 @@ package com.example.administrador.projetofaculdade;
 
 public class TipoDespesa {
 
-    public int             idTipoDespesa;
-    private String          nmTipoDespesa;
-
+    public int idTipoDespesa;
+    private String nmTipoDespesa;
 
 
     public TipoDespesa(int idTipoDespesa, String nmTipoDespesa) {
@@ -35,11 +34,9 @@ public class TipoDespesa {
         this.nmTipoDespesa = nmTipoDespesa;
     }
 
-    public TipoDespesa(){
+    public TipoDespesa() {
 
     }
-
-
 
 
 }

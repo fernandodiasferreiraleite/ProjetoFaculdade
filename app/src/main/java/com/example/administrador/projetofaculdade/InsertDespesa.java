@@ -29,7 +29,7 @@ public class InsertDespesa extends Activity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_insert_despesa);
-            editNomeDespesa = (EditText) findViewById(R.id.editNomeClube);
+            editNomeDespesa = (EditText) findViewById(R.id.editNomeDespesa);
             editvalor = (EditText) findViewById(R.id.editvalor);
             editdataPagamento = (EditText) findViewById(R.id.editdataPagamento);
             editdesconto=(EditText)findViewById(R.id.editdesconto);
@@ -42,9 +42,10 @@ public class InsertDespesa extends Activity {
            Despesa despesa = new Despesa();
             despesa.setNomeDespesa(editNomeDespesa.getText().toString());
            despesa.setValor(Integer.parseInt(editvalor.getText().toString()));
-           // despesa.setDataPagamento(editdataPagamento.getString().toString());
+           despesa.setDataPagamento(editdataPagamento.getText().toString());
             despesa.setDesconto(Integer.parseInt(editdesconto.getText().toString()));
             despesa.setIdPessoa(Integer.parseInt(editidPessoa.getText().toString()));
+            despesa.setIdTipoDespesa(Integer.parseInt(editidTipoDespesa.getText().toString()));
             new UploadToMyAPI().execute(despesa);
         }
 

@@ -15,7 +15,7 @@
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/editNomeClube"
+        android:id="@+id/editNomeDespesa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
@@ -68,7 +68,7 @@
     <Button
         android:onClick="cadastrarDespesa"
         android:layout_marginTop="@dimen/edit_margin_top"
-        android:id="@+id/btnCadastrarClube"
+        android:id="@+id/btnCadastrarDespesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastrar"
