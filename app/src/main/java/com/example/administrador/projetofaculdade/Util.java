@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static android.R.attr.format;
+
 
 /**
  * Created by Lab. Desenvolvimento on 03/04/2017.
@@ -50,11 +52,10 @@ public class Util {
             mainObject.put("nomeDespesa",despesa.getNomeDespesa());
             mainObject.put("dataPagamento",despesa.getDataPagamento());
             mainObject.put("desconto",despesa.getDesconto());
-            mainObject.put("id_despesa",despesa.getIdDespesa());
-            mainObject.put("idpessoa",despesa.getIdPessoa());
-            mainObject.put("idtipodespesa",despesa.getIdTipoDespesa());
+            mainObject.put("idDespesa",despesa.getIdDespesa());
+            mainObject.put("idPessoa",despesa.getIdPessoa());
+            mainObject.put("idTipoDespesa",despesa.getIdTipoDespesa());
             mainObject.put("valor",despesa.getValor());
-
             return mainObject.toString();
         } catch (JSONException e) {
             e.printStackTrace();
@@ -75,12 +76,11 @@ public class Util {
             for(int i = 0; i < mainObject.length(); i++){
 
                 Despesa novoDespesa = new Despesa();
-
                 JSONObject localObj = mainObject.getJSONObject(i);
 
-                int IdDespesa = localObj.getInt("IdDespesa");
+                int id = localObj.getInt("idDespesa");
 
-                String nomeDespesa = localObj.getString("nomeDespesa");
+                String despesa = localObj.getString("nomeDespesa");
 
                 float valor = Float.parseFloat(localObj.getString("valor"));
 
@@ -88,13 +88,13 @@ public class Util {
 
                 float desconto = Float.parseFloat(localObj.getString("desconto"));
 
-                int idTipoDespesa = localObj.getInt("IdTipoDespesa");
+                int idTipoDespesa = localObj.getInt("idTipoDespesa");
 
-                int idPessoa = localObj.getInt("IdPessoa");
+                int idPessoa = localObj.getInt("idPessoa");
 
-                novoDespesa.setIdDespesa(IdDespesa);
+                novoDespesa.setIdDespesa(id);
 
-                novoDespesa.setNomeDespesa(nomeDespesa);
+                novoDespesa.setNomeDespesa(despesa);
 
                 novoDespesa.setValor(valor);
 
@@ -124,8 +124,5 @@ public class Util {
         }
         return null;
     }
-
-
-
 
 }
