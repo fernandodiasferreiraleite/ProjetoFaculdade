@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static android.R.attr.format;
-
 
 /**
  * Created by Lab. Desenvolvimento on 03/04/2017.
@@ -52,10 +50,11 @@ public class Util {
             mainObject.put("nomeDespesa",despesa.getNomeDespesa());
             mainObject.put("dataPagamento",despesa.getDataPagamento());
             mainObject.put("desconto",despesa.getDesconto());
-            mainObject.put("idDespesa",despesa.getIdDespesa());
-            mainObject.put("idPessoa",despesa.getIdPessoa());
-            mainObject.put("idTipoDespesa",despesa.getIdTipoDespesa());
+            mainObject.put("id_despesa",despesa.getIdDespesa());
+            mainObject.put("idpessoa",despesa.getIdPessoa());
+            mainObject.put("idtipodespesa",despesa.getIdTipoDespesa());
             mainObject.put("valor",despesa.getValor());
+
             return mainObject.toString();
         } catch (JSONException e) {
             e.printStackTrace();
@@ -67,7 +66,7 @@ public class Util {
 
     public static List<Despesa> convertJSONtoDespesa(String jsonFile){
 
-        //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
         List<Despesa> despesas = new ArrayList<>();
         try {
@@ -76,25 +75,26 @@ public class Util {
             for(int i = 0; i < mainObject.length(); i++){
 
                 Despesa novoDespesa = new Despesa();
+
                 JSONObject localObj = mainObject.getJSONObject(i);
 
-                int id = localObj.getInt("idDespesa");
+                int IdDespesa = localObj.getInt("IdDespesa");
 
-                String despesa = localObj.getString("nomeDespesa");
+                String nomeDespesa = localObj.getString("nomeDespesa");
 
                 float valor = Float.parseFloat(localObj.getString("valor"));
 
-                String dataPagamento = localObj.getString("dataPagamento");
+                Date dataPagamento = formato.parse("dataPagamento");
 
                 float desconto = Float.parseFloat(localObj.getString("desconto"));
 
-                int idTipoDespesa = localObj.getInt("idTipoDespesa");
+                int idTipoDespesa = localObj.getInt("IdTipoDespesa");
 
-                int idPessoa = localObj.getInt("idPessoa");
+                int idPessoa = localObj.getInt("IdPessoa");
 
-                novoDespesa.setIdDespesa(id);
+                novoDespesa.setIdDespesa(IdDespesa);
 
-                novoDespesa.setNomeDespesa(despesa);
+                novoDespesa.setNomeDespesa(nomeDespesa);
 
                 novoDespesa.setValor(valor);
 
@@ -111,6 +111,8 @@ public class Util {
 
         } catch (JSONException e) {
             e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
         return despesas;
     }
@@ -122,5 +124,8 @@ public class Util {
         }
         return null;
     }
+
+
+
 
 }
