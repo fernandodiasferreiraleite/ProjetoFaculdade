@@ -8,11 +8,11 @@
 
 
     <string name="hintNomeDespesa">Nome da Despesa</string>
-    <string name="hintvalor">valor</string>
-    <string name="hintdataPagamento">data Pagamento</string>
-    <string name="hintdesconto">desconto</string>
-    <string name="hintidTipoDespesa">idTipoDespesa</string>
-    <string name="hintidPessoa">idPessoa</string>
+    <string name="hintValor">valor</string>
+    <string name="hintDataPagamento">data Pagamento</string>
+    <string name="hintDesconto">desconto</string>
+    <string name="hintIdTipoDespesa">idTipoDespesa</string>
+    <string name="hintIdPessoa">idPessoa</string>
 
 </resources>
 

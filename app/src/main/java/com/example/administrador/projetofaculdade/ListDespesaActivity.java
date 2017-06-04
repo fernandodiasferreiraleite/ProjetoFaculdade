@@ -45,8 +45,7 @@ public class ListDespesaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent cadastroDespesa = new Intent (ListDespesaActivity.this,InsertDespesa.class);
                 startActivity(cadastroDespesa);
-              //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                       // .setAction("Action", null).show();
+
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

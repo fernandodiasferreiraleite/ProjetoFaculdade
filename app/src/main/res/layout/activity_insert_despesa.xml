@@ -19,60 +19,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintNomeDespesa"/>
+        android:hint="Nome da Despesa"/>
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/editvalor"
+        android:id="@+id/editValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintvalor"/>
+        android:hint="Valor"/>
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/editdataPagamento"
+        android:id="@+id/editDataPagamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintdataPagamento"/>
+        android:hint="data Pagamento"/>
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/editdesconto"
+        android:id="@+id/editDesconto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintdesconto"/>
+        android:hint="Desconto"/>
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/idTipoDespesa"
+        android:id="@+id/IdTipoDespesa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintidTipoDespesa"/>
+        android:hint="IdTipoDespesa"/>
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/idPessoa"
+        android:id="@+id/IdPessoa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:hint="@string/hintidPessoa"/>
+        android:hint="IdPessoa"/>
+
     <Button
-        android:onClick="cadastrarDespesa"
-        android:layout_marginTop="@dimen/edit_margin_top"
         android:id="@+id/btnCadastrarDespesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
         android:layout_gravity="center"
-        android:textSize="20dp"/>
+        android:layout_marginTop="@dimen/edit_margin_top"
+        android:onClick="cadastrarDespesa"
+        android:text="Cadastrar"
+        android:textSize="20dp" />
 
 </LinearLayout>

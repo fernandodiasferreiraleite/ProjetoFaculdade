@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void initializeControlControls() {
 
         callbackManager = CallbackManager.Factory.create();
-//txtStatus=(TextView)findViewById(R.id.txtStatus);
+
         loginbutton = (LoginButton) findViewById(R.id.loginbutton);
 
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
 
                 Toast.makeText(MainActivity.this, "Login sucesso\n" + loginResult.getAccessToken(), Toast.LENGTH_SHORT).show();
-                //return setContentView(R.layout.activity_list_despesa);
+
 
                 //
                 Intent intent = new Intent(MainActivity.this, ListDespesaActivity.class);
@@ -79,22 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//classe Despesa...
 
-    public void selectMainOpetion(View view) {
-        Intent intent = null;
-        switch (view.getId()) {
-            case R.id.btnInserir:
-                intent = new Intent(this, InsertDespesa.class);
-                break;
-            case R.id.btnListar:
-                intent = new Intent(this, ListDespesaActivity.class);
-                break;
-        }
-        if (intent != null) {
-            startActivity(intent);
-        }
-    }
 
 
 }
