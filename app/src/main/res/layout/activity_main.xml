@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.administrador.projetofaculdade.InsertDespesa">
+    tools:context="com.example.administrador.projetofaculdade.Menu">
 
 
     <Button
@@ -24,4 +24,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Listar Despesa" />
+
+    <Button
+        android:onClick="selectMainOpetion"
+        android:id="@+id/btnBaixarRelatorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Baixar seu Relatorio" />
+
+
 </LinearLayout>

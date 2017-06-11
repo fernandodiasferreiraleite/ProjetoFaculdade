@@ -22,10 +22,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import static com.example.administrador.projetofaculdade.R.styleable.FloatingActionButton;
-import static com.example.administrador.projetofaculdade.R.styleable.Toolbar;
-
-
 /**
  * Created by Lab. Desenvolvimento on 03/04/2017.
  */
@@ -43,9 +39,8 @@ public class ListDespesaActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent cadastroDespesa = new Intent (ListDespesaActivity.this,InsertDespesa.class);
+                Intent cadastroDespesa = new Intent (ListDespesaActivity.this,Menu.class);
                 startActivity(cadastroDespesa);
-
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

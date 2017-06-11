@@ -3,7 +3,8 @@ package com.example.administrador.projetofaculdade;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.view.*;
+import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Login sucesso\n" + loginResult.getAccessToken(), Toast.LENGTH_SHORT).show();
 
 
-                //
+
                 Intent intent = new Intent(MainActivity.this, ListDespesaActivity.class);
                 startActivity(intent);
+               // Intent intent =new Intent(MainActivity.this, Menu.class);
+               // startActivity(intent);
+
+
+
 
 
             }

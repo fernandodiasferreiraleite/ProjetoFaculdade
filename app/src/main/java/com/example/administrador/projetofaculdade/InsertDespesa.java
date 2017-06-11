@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -40,9 +39,7 @@ public class InsertDespesa extends Activity {
     }
 
 
-
-    public void cadastrarDespesa(View v)
-    {
+    public void cadastrarDespesa(View v) {
         Despesa despesa = new Despesa();
         despesa.setNomeDespesa(editNomeDespesa.getText().toString());
         despesa.setValor(Integer.parseInt(editValor.getText().toString()));
@@ -76,7 +73,7 @@ public class InsertDespesa extends Activity {
         @Override
         protected String doInBackground(Despesa... params) {
             HttpURLConnection urlConnection = null;
-            try {//arrrumar urlm para conecçao
+            try {
                 URL url = new URL("http://gerenciamentofinanceiro.esy.es/insert.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
@@ -105,22 +102,24 @@ public class InsertDespesa extends Activity {
                 }
             }
         }
+
+
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             Intent listaDespesa=null;
 
-                if (Util.getStatusFromJSOM(serverResponseMessage).equals("1")) {
-                    Toast.makeText(InsertDespesa.this, "Despesa registrado no Sistema!", Toast.LENGTH_SHORT).show();
-                    listaDespesa = new Intent(InsertDespesa.this, ListDespesaActivity.class);
-                    startActivity(listaDespesa);
-                } else {
-                    Toast.makeText(InsertDespesa.this, "Falha ao cadastrar o despesa.", Toast.LENGTH_SHORT).show();
-                }
+            if (Util.getStatusFromJSOM(serverResponseMessage).equals("1")) {
+                Toast.makeText(InsertDespesa.this, "Despesa registrado no Sistema!", Toast.LENGTH_SHORT).show();
+                listaDespesa = new Intent(InsertDespesa.this, ListDespesaActivity.class);
+                startActivity(listaDespesa);
+            } else {
+                Toast.makeText(InsertDespesa.this, "Falha ao cadastrar o despesa.", Toast.LENGTH_SHORT).show();
             }
-
         }
+
     }
+}
 
 
 

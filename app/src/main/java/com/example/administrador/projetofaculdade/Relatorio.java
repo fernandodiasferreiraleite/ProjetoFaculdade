@@ -36,7 +36,7 @@ public class Relatorio extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... params) {
         String PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Pdfs/";
-        String SITE = "http://www.site.com.br";
+        String SITE = "http://www.cairu.br/biblioteca/arquivos/Tecnologia/Como_criar_sites_ebooks.pdf";
         String arquivoNome = params[0];
 
         try{
