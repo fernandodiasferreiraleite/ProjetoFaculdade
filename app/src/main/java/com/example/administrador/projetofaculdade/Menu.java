@@ -27,6 +27,9 @@ protected void onCreate(Bundle savedInstanceState) {
             case R.id.btnBaixarRelatorio:
                 intent = new Intent(this,Relatorio3.class);
                 break;
+            case R.id.btnEnviarEmail:
+                intent = new Intent(this,MainActivity.class);
+                break;
         }
         if(intent != null){
             startActivity(intent);

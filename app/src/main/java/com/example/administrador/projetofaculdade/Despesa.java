@@ -74,7 +74,7 @@ public class Despesa {
     }
 
     public void setValor(float valor) {
-        this.valor = valor;
+        this.valor =valor;
     }
 
     public int getIdPessoa() {

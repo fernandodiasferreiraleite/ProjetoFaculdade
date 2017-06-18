@@ -1,5 +1,4 @@
 package com.example.administrador.projetofaculdade;
-
 import java.util.Date;
 import java.util.Properties;
 
@@ -17,11 +16,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
 /**
- * Created by brandonjenniges on 11/6/15.
+ * Created by admin4 on 18/06/2017.
  */
-public class Email extends javax.mail.Authenticator {
+
+public class Mail extends javax.mail.Authenticator {
     private String _user;
     private String _pass;
 
@@ -42,7 +41,7 @@ public class Email extends javax.mail.Authenticator {
 
     private Multipart _multipart;
 
-    public Email() {
+    public Mail() {
         _host = "smtp.gmail.com"; // default smtp server
         _port = "465"; // default smtp port
         _sport = "465"; // default socketfactory port
@@ -70,7 +69,7 @@ public class Email extends javax.mail.Authenticator {
         CommandMap.setDefaultCommandMap(mc);
     }
 
-    public Email(String user, String pass) {
+    public Mail(String user, String pass) {
         this();
 
         _user = user;

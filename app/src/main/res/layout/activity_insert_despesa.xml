@@ -9,7 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.administrador.projetofaculdade.InsertDespesa">
+    tools:context="com.example.administrador.projetofaculdade.InsertDespesa"
+    android:weightSum="1">
 
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
@@ -29,15 +30,19 @@
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:hint="Valor"/>
+
     <EditText
-        android:layout_marginTop="@dimen/edit_margin_top"
+        android:id="@+id/editDataPagamento"
+        android:layout_width="290dp"
+        android:layout_height="53dp"
         android:layout_marginLeft="@dimen/edit_margin_left"
         android:layout_marginRight="@dimen/edit_margin_right"
-        android:id="@+id/editDataPagamento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:hint="data Pagamento"/>
+        android:layout_marginTop="@dimen/edit_margin_top"
+        android:layout_weight="0.04"
+        android:hint="data Pagamento"
+        android:inputType="date"
+        android:textSize="18dp" />
+
     <EditText
         android:layout_marginTop="@dimen/edit_margin_top"
         android:layout_marginLeft="@dimen/edit_margin_left"

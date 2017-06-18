@@ -4,6 +4,7 @@
     <string name="appbar_scrolling_view_behavior"></string>
     <string name="title_activity_list_despesa">ListDespesaActivity</string>
     <string name="title_activity_main22">Main22Activity</string>
+    <string name="title_activity_email">ActivityEmail</string>
 
 
 
@@ -13,6 +14,8 @@
     <string name="hintDesconto">desconto</string>
     <string name="hintIdTipoDespesa">idTipoDespesa</string>
     <string name="hintIdPessoa">idPessoa</string>
+    <string name="hintEmail">email</string>
+    <string name="hintsenha">senha</string>
 
 </resources>
 
