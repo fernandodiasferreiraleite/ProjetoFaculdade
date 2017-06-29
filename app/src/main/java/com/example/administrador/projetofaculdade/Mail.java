@@ -1,4 +1,5 @@
 package com.example.administrador.projetofaculdade;
+import java.io.File;
 import java.util.Date;
 import java.util.Properties;
 
@@ -8,6 +9,8 @@ import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.activation.MailcapCommandMap;
 import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
@@ -109,20 +112,32 @@ public class Mail extends javax.mail.Authenticator {
             // send email
             Transport.send(msg);
 
+
             return true;
         } else {
             return false;
         }
     }
 
-    public void addAttachment(String filename) throws Exception {
-        BodyPart messageBodyPart = new MimeBodyPart();
-        DataSource source = new FileDataSource(filename);
+
+
+    public void addAttachment(DataSource source, String attachmentName)
+            throws MessagingException {
+
+        MimeBodyPart messageBodyPart = new MimeBodyPart();
+        String filename = "http://10.0.2.2:9999/TESTE-1.0/RelatorioDespesas";
         messageBodyPart.setDataHandler(new DataHandler(source));
         messageBodyPart.setFileName(filename);
 
         _multipart.addBodyPart(messageBodyPart);
     }
+
+
+
+
+
+
+
 
     @Override
     public PasswordAuthentication getPasswordAuthentication() {
@@ -244,7 +259,7 @@ public class Mail extends javax.mail.Authenticator {
         return _multipart;
     }
 
-    public void set_multipart(Multipart _multipart) {
+    public void set_multipart(Multipart multipart) {
         this._multipart = _multipart;
     }
 }

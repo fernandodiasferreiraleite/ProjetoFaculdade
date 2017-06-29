@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         email.m.setBody(body.getText().toString());
         email.m.set_to(recipients);
         email.m.set_subject(subject.getText().toString());
+
         email.execute();
     }
 

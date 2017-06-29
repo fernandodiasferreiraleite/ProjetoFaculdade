@@ -25,7 +25,7 @@ public class Relatorio3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cairu.br/biblioteca/arquivos/Tecnologia/Como_criar_sites_ebooks.pdf"));
+                Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse("http://172.31.0.34:9999/TESTE-1.0/RelatorioDespesas"));
                 startActivity(it);
 
             }
@@ -35,6 +35,5 @@ public class Relatorio3 extends AppCompatActivity {
 
 }
 
-//open especifc email mesage in gmail
-//app
+
 
